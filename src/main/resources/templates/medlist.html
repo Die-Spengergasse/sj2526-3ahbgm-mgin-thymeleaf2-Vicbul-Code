@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lagerbestand</title>
+    <link rel="stylesheet" th:href="@{/urahara.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav>
+    <a th:href="@{/medikamente/}" class="btn-nav">Zum Laden</a>
+    <a th:href="@{/medikamente/add}" class="btn-nav">Neue Substanz erforschen</a>
+</nav>
+
+<h1>Aktueller Lagerbestand</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Beschreibung</th>
+        <th>Aktion</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="med : ${medikamente}">
+        <td th:text="${med.medikamenteId}">ID</td>
+        <td th:text="${med.name}">Name</td>
+        <td th:text="${med.description}">Beschreibung</td>
+        <td>
+            <form th:action="@{/medikamente/delete/{id}(id=${med.medikamenteId})}" th:method="delete" style="box-shadow: none; padding: 0; width: auto; background: none; border: none;">
+                <button type="submit" class="btn-delete">Vernichten</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

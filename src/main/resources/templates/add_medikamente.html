@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Neue Forschung</title>
+    <link rel="stylesheet" th:href="@{/urahara.css}">
+</head>
+<body>
+<div class="container">
+    <nav class="main-nav">
+        <a th:href="@{/medikamente/}" class="btn-nav"> Zurück zum Laden</a>
+        <a th:href="@{/medikamente/list}" class="btn-nav"> Zum Lager</a>
+    </nav>
+
+    <h1>Forschung & Entwicklung</h1>
+    <p style="color: #888; margin-bottom: 20px;">"Was brauen wir heute Schönes zusammen?"</p>
+
+    <form th:action="@{/medikamente/add}" th:object="${Medikamente}" method="post">
+        <div class="form-group">
+            <label>Name der Substanz</label>
+            <input type="text" th:field="*{name}" placeholder="z.B. Tenshintai" required />
+        </div>
+
+        <div class="form-group">
+            <label>Geheime Eigenschaften</label>
+            <input type="text" th:field="*{description}" placeholder="Was bewirkt es?" required />
+        </div>
+
+        <button type="submit">Im Inventar versiegeln</button>
+    </form>
+    <div class ="shinigami-portrait-container">
+    <img th:src="@{/Urahara_2.png}" alt="Urahara_2" style="width: 250px;">
+    <img th:src="@{/Yoruichi.jpg}" alt="Yoruichi" style="width: 250px;">
+    </div>
+</div>
+</body>
+</html>

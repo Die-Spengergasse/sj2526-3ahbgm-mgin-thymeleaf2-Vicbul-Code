@@ -1,0 +1,164 @@
+/* --- URAHARA SHOTEN: COMPLETE AESTHETIC --- */
+
+/* 1. Grundlayout & Zentrierung */
+body {
+    /* Dunkles Holz/Schatten-Hintergrund */
+    background-color: #1a1a1a;
+    /* Subtile Washi-Papier Textur */
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiIHZpZXdCb3g9IjAgMCA0IDQiPjxnIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iIzk5OSIgZmlsbC1vcGFjaXR5PSIwLjA1Ij48cGF0aCBkPSJNMCAwaDF2MUgwek0xIDFoMXYxSDF6TTIgMGgxdjFIMnpNMyAxaDF2MUgzeiIvPjwvZz48L2c+PC9zdmc+');
+    font-family: 'Crimson Text', serif;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+
+    /* ZENTRIERUNG ALLER ELEMENTE */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+/* 2. Container & Überschriften */
+.container {
+    width: 90%;
+    max-width: 800px;
+    background: rgba(38, 38, 38, 0.95);
+    border: 2px solid #2d6a4f;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #2d6a4f;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    margin-top: 0;
+}
+
+/* 3. Navigation */
+nav, .main-nav {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #2d6a4f;
+    padding-bottom: 15px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.btn-nav {
+    text-decoration: none;
+    color: #e0e0e0;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.btn-nav:hover {
+    background-color: rgba(45, 106, 79, 0.3);
+    box-shadow: 0 0 10px rgba(45, 106, 79, 0.5);
+}
+
+/* 4. Formular Design */
+form {
+    background-color: #262626;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    display: inline-block; /* Damit es nicht die volle Breite erzwingt */
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+label {
+    color: #2d6a4f;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    background-color: #2d6a4f;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+/* 5. Bild-Zentrierung (Urahara & Yoruichi) */
+.shinigami-portrait-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.shinigami-portrait-container img {
+    width: 250px;
+    height: auto;
+    border: 3px solid #2d6a4f;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: transform 0.4s ease;
+}
+
+.shinigami-portrait-container img:hover {
+    transform: scale(1.05) rotate(2deg);
+    border-color: #27ae60;
+}
+
+/* 6. Tabellen Design (für medlist.html) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #262626;
+    margin-top: 20px;
+}
+
+th {
+    /* Urahara-Hut Streifen-Muster */
+    background-color: #1a1a1a;
+    background-image: linear-gradient(45deg, #1a1a1a 25%, #2d6a4f 25%, #2d6a4f 50%, #1a1a1a 50%, #1a1a1a 75%, #2d6a4f 75%, #2d6a4f 100%);
+    background-size: 10px 10px;
+    color: white;
+    padding: 15px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+}
+
+.btn-delete {
+    background-color: #a71d1d;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+}

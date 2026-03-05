@@ -1,17 +1,21 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/html">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Greeting</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Urahara's Shop - Inventar</title>
+    <link rel="stylesheet" th:href="@{/urahara.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-    <h1>Hallo</h1>
-    Datum: <span th:text="${today}"></span>
-    <div>
-        <a href="/patient/list">patient list</a>
-    </div>
-</div>
+<h1>Inventar-Verwaltung</h1>
+<hr style="border: 1px solid #2d6a4f; width: 50%;">
+<br>
+<nav>
+    <a th:href="@{/medikamente/list}" class="btn-nav">Geheimes Lager anzeigen</a>
+    <a th:href="@{/medikamente/add}" class="btn-nav">Neue Substanz erforschen</a>
+</nav>
+
+<img th:src="@{/Urahara_1.jpg}" alt="Urahara_1" style="width: 250px;">
+
+<p style="font-style: italic; color: #888;">"Willkommen, willkommen! Suchen Sie etwas Spezielles?"</p>
 </body>
 </html>
